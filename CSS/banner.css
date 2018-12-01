@@ -1,0 +1,36 @@
+.banner {
+  height:200px;
+  background-image: url("file:///Users/Steph/Desktop/Test%20resources%20repository/images/banner.jpg");
+  background-size: cover;
+  color: white;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  justify-content: center;
+}
+
+.banner h1 {
+  font-size: 25px;
+  /* font-weight: bolder; */
+  font-family: Roboto,sans-serif;
+
+}
+
+@media screen and (max-width: 400px) {
+  .banner h1 {
+    display: none;
+  }
+  .banner-content {
+    width: 45%;
+  }
+  .form-control{
+    font-size: 18px;
+  }
+}
+
+.form-control {
+background: url("file:///Users/Steph/Desktop/Test%20resources%20repository/images/search.png") no-repeat scroll 95% 50%;
+background-color: white;
+
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Test resources repository</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+  <!-- Custom fonts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Custom styles -->
+  <link href='CSS/style.css' rel='stylesheet'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body onresize="responsiveFunc()">
+
+
+  <!-- Navigation bar -->
+  <div class="navbar" id="mynavbar">
+    <div class="brand">
+      <a href="#"><img src="images/logo.png"></a>
+    </div>
+    <div class="tabs">
+      <div class="tabs-item active">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="tabs-item">
+        <a href="samples.html">Samples</a>
+      </div>
+      <div class="tabs-item dropdown">
+        <a href="#">Teams</a>
+        <div class="dropdown-content">
+          <a href="index.html">Product Validation</a>
+          <a href="index.html">IDT</a>
+          <a href="index.html">Automation</a>
+        </div>
+      </div>
+      <div class="tabs-item">
+        <a href="index.html">Features</a>
+      </div>
+      <div class="tabs-item">
+        <a href="index.html">Tutorials</a>
+      </div>
+    </div>
+    <div class="menu">
+      <a href="javascript:void(0);" class="icon" onclick="responsiveFunc()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function responsiveFunc() {
+      var x = document.getElementById("mynavbar");
+      var c = x.children;
+      var w = window.innerWidth;
+      var e = event.type;
+      if (x.className === "navbar") {
+        if (e !== "resize") {
+          x.className += " responsive";
+        }
+        for (var i = 0; i < c.length; i++) {
+          if (c[i].className === "tabs") {
+            if (w < 500) {
+              c[i].style.flexDirection = "column";
+              break;
+            } else {
+              c[i].style.flexDirection = "row";
+            }
+            break;
+          }
+        }
+      } else {
+        x.className = "navbar";
+        for (var i = 0; i < c.length; i++) {
+          if (c[i].className === "tabs") {
+            c[i].style.flexDirection = "none";
+            break;
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- banner -->
+  <div class="banner">
+    <div class="banner-content">
+      <h1>TEST RESOURCES REPOSITORY</h1>
+      <form id="search">
+        <input type="search" class="form-control form-control-lg" placeholder="Search...">
+      </form>
+    </div>
+  </div>
+
+  <!-- container -->
+  <div class="mycontainer">
+      <div class="mycontainer-items">
+        <div class="mycontainer-img">
+          <img src="images/databases.png">
+        </div>
+      </div>
+      <div class="mycontainer-items">
+        <div class="mycontainer-img">
+          <img src="images/data.png">
+        </div>
+      </div>
+      <div class="mycontainer-items">
+        <div class="mycontainer-img">
+          <img src="images/connections.png">
+        </div>
+      </div>
+      <div class="mycontainer-items">
+        <div class="mycontainer-img">
+          <img src="images/lcmbiar.png">
+        </div>
+      </div>
+      <!-- <div class="mycontainer-items">
+        <a href="#"><img src="images/lcmbiar.png"></a>
+      </div> -->
+  </div>
+
+
+
+
+  <!-- <section class="features-icons text-center mt-5 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <img src="images/databases.png" alt="Access databases description" width="100" />
+          <p>
+            Access to <strong>databases</strong> descriptions
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <img src="images/data.png" alt="Access data description" width="100" />
+          <p>
+            Access to <strong>data</strong> descriptions
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <img src="images/connections.png" alt="Access connections description" width="100" />
+          <p>
+            Access to <strong>connections</strong> descriptions
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <img src="images/lcmbiar.png" alt="Access lcmbiar description" width="100" />
+          <p>
+            Access to <strong>LCMBIAR</strong> descriptions
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+    <!-- footer -->
+  <div class="footer-bottom fixed-bottom">
+    <ul>
+      <li class="d-block align-middle">
+        <a href="#"><i class="fa fa-github"></i></a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
